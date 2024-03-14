@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .frame-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .frame {
+            width: 50%;
+            height: 100vh;
+            overflow-y: hidden;
+        }
+        .frame::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <style th:replace="~{nav-bar :: style}"></style>
+    <script>
+        function hiddenChanger() {
+            var target = document.getElementById("explanation");
+            target.style.display = (target.style.display === "none") ? "block" : "none";
+        }
+    </script>
+    <title></title>
+</head>
+<body>
+<div th:replace="~{/nav-bar :: nav-bar}"></div>
+<div class="frame-container">
+    <div style="color: white">
+    <form action="/coStream" method="post" style="color: white">
+        <h1>같이 볼 유튜브 링크</h1>
+        <input type="text" name="youtube" style="width: 20vw; height: 20px">
+    </form>
+        <h2 onclick="hiddenChanger()" style="cursor: pointer">▼ 유튜브 링크 첨부방법 ▼</h2>
+        <span id="explanation" style="display: none">
+        <h3>1. 보고자 하는 유튜브 영상으로 들어간 후 [공유] 클릭</h3>
+        <img src="/유튜브1.png">
+        <h3>2. 퍼가기 클릭</h3>
+        <img src="/유튜브2.png">
+        <h3>3. 링크 전체 복사후 입력</h3>
+        <img src="/유튜브3.png">
+        </span>
+    </div>
+</div>
+</body>
+</html>

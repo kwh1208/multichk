@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>multichk</title>
+    <style th:replace="~{nav-bar :: style}"></style>
+</head>
+<body>
+<div th:replace="~{/nav-bar :: nav-bar}"></div>
+<div class="container">
+    <a href="/dual"><div class="link_container"><strong>DualStream</strong></div></a>
+    <div style="width: 10%;"></div>
+    <a href="/three"><div class="link_container" ><strong>ThreeStream</strong></div></a>
+</div>
+<br>
+<div class="container">
+    <a href="/Quad"><div class="link_container"><strong>QuadStream</strong></div></a>
+    <div style="width: 10%;"></div>
+    <a href="/coStream"><div class="link_container"><strong>CoStream</strong></div></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            overflow-y: hidden;
+            background-color: #141517;
+        }
+        .frame-container {
+            display: flex;
+        }
+        .frame {
+            width: 100%; /* Adjust the width as needed */
+            height: 100%; /* Adjust the height as needed */
+            border: none;
+        }
+    </style>
+    <style th:replace="~{nav-bar :: style}"></style>
+    <script th:replace="~{/nav-bar :: popup}"></script>
+</head>
+<body>
+<div th:replace="~{/nav-bar :: nav-bar}"></div>
+<div class="frame-container" >
+    <div style="overflow-y: hidden; width: 50%; height: 47vh;">
+        <iframe class="frame" src="https://chzzk.naver.com/" scrolling="no"></iframe>
+    </div>
+    <div style="overflow-y: hidden; width: 50%; height: 47vh;">
+        <iframe class="frame" src="https://chzzk.naver.com/" scrolling="no"></iframe>
+    </div>
+    <div style="overflow-y: hidden; width: 50%; height: 47.7vh; position: absolute; left: 25%; bottom: 0px;">
+        <iframe class="frame" src="https://chzzk.naver.com/" scrolling="no"></iframe>
+    </div>
+</div>
+</body>
+</html>
